@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#9E7890E4"
+    android:gravity="right"
+    android:layout_gravity="right"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="#9E7890E4"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgShort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+    </ImageView>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9E7890E4"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#9E7890E4"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingRight="5dp"
+                android:text="عنوان"></TextView>
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingRight="5dp"
+                android:text="سال"></TextView>
+
+            <TextView
+                android:id="@+id/imdbID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:padding="5dp"
+                android:text="imdbID"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#9E7890E4"
+            android:orientation="vertical"
+            android:gravity="right"
+
+            android:layout_gravity="right"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingRight="5dp"
+                android:text="عنوان"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingRight="5dp"
+                android:text="سال"></TextView>
+
+
+            <Button
+                android:id="@+id/btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#9E7890E4"
+                android:paddingTop="30dp"
+                android:paddingRight="5dp"
+                android:text="بیشتر..."></Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
