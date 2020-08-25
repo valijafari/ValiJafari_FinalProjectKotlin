@@ -6,6 +6,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -56,6 +57,8 @@ public class FavoriteList extends AppCompatActivity implements   Adapter_omdb_ap
         Adapter_omdb_api adapterJson = new Adapter_omdb_api(dto_OmdbClass.getSearch(), FavoriteList.this);
         adapterJson.setClickListener(this);
         recyclerViewJson.setAdapter(adapterJson);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerViewJson.getContext(), new LinearLayoutManager(this).getOrientation());
+        recyclerViewJson.addItemDecoration(dividerItemDecoration);
     }
 
     @Override

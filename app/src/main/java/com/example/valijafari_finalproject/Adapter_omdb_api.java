@@ -55,10 +55,15 @@ public class Adapter_omdb_api extends RecyclerView.Adapter<Adapter_omdb_api.View
             //holder.txt_rated.setText(String.valueOf(dto_search.getRated()));
             try
             {
-                Glide.with(this.mContext).load(dto_search.getPoster()).into(holder.img_poster);
+                if  (! dto_search.getPoster().equals("N/A")) {
+                    Glide.with(this.mContext).load(dto_search.getPoster()).into(holder.img_poster);
+                }
+                else
+                    holder.img_poster.setImageResource(R.drawable.noimageavaible);
+
             }
              catch (Exception ex){
-                 holder.img_poster.setBackground(ContextCompat.getDrawable(holder.img_poster.getContext(), R.drawable.ic_launcher_background));
+                 holder.img_poster.setBackground(ContextCompat.getDrawable(holder.img_poster.getContext(), R.drawable.noimageavaible));
             }
         }
         catch (Exception ex){
@@ -83,7 +88,7 @@ public class Adapter_omdb_api extends RecyclerView.Adapter<Adapter_omdb_api.View
 //        TextView txt_Actors;
 //        TextView txt_Language;
 //        TextView txt_imdbRating;
-        Button btnMore;
+        TextView btnMore;
         ImageView img_poster;
 
         ViewHolder(View itemView) {
@@ -94,6 +99,7 @@ public class Adapter_omdb_api extends RecyclerView.Adapter<Adapter_omdb_api.View
             img_poster = itemView.findViewById(R.id.imgShort);
             btnMore = itemView.findViewById(R.id.btnMore);
             btnMore.setOnClickListener(this);
+            img_poster.setOnClickListener(this);
         }
 
         @Override

@@ -53,18 +53,23 @@ public class InformationFilmFragment extends Fragment {
         txtLanguageDetail.setText(dto_OmdbClassDetail.getLanguage().toString());
         txtimdbRatingDetail.setText(dto_OmdbClassDetail.getImdbRating().toString());
 
-        Glide.with(view.getContext()).load(dto_OmdbClassDetail.getPoster()).into(poster);
+        if  (! dto_OmdbClassDetail.getPoster().equals("N/A")) {
+
+            Glide.with(view.getContext()).load(dto_OmdbClassDetail.getPoster()).into(poster);
+        }
+        else
+            poster.setImageResource(R.drawable.noimageavaible);
 
         OmdbRepository database = new OmdbRepository(view.getContext(), "FilmYab1", null, 1);
         if  (database.ExsitsFilm(dto_OmdbClassDetail.getImdbID().toString())==true)
         {
             ExsitsFilm=true;
-            FavoriteimageView.setImageResource(R.drawable.uninstall);
+            FavoriteimageView.setImageResource(R.mipmap.uninstall);
         }
         else
         {
             ExsitsFilm=false;
-            FavoriteimageView.setImageResource(R.drawable.tagicon);
+            FavoriteimageView.setImageResource(R.mipmap.tagicon);
         }
 
         FavoriteimageView.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +79,7 @@ public class InformationFilmFragment extends Fragment {
                 if  (ExsitsFilm) {
                     database.DeleteOmdbInformation( dto_OmdbClassDetail.getImdbID().toString());
                     ImageView FavoriteimageView = v.findViewById(R.id.AddToFavorite);
-                    FavoriteimageView.setImageResource(R.drawable.tagicon);
+                    FavoriteimageView.setImageResource(R.mipmap.tagicon);
                     Toast.makeText(v.getContext(), "این فیلم از لیست علاقه مندی های شما حذف شد.", Toast.LENGTH_LONG).show();
                     ExsitsFilm=false;
                 }
@@ -84,7 +89,7 @@ public class InformationFilmFragment extends Fragment {
                             ,dto_OmdbClassDetail.getGenre().toString(),dto_OmdbClassDetail.getWriter().toString(),dto_OmdbClassDetail.getActors().toString(),
                             dto_OmdbClassDetail.getLanguage().toString(),dto_OmdbClassDetail.getImdbRating().toString());
                     ImageView FavoriteimageView = v.findViewById(R.id.AddToFavorite);
-                    FavoriteimageView.setImageResource(R.drawable.uninstall);
+                    FavoriteimageView.setImageResource(R.mipmap.uninstall);
                     Toast.makeText(v.getContext(), "این فیلم به لیست علاقه مندی های شما اضافه شد.", Toast.LENGTH_LONG).show();
                     ExsitsFilm=true;
                 }

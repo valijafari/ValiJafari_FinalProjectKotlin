@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9E7890E4"
+    android:background="#7890E4"
     android:orientation="vertical"
     tools:context=".InformationFilmFragment">
 
@@ -14,27 +15,29 @@
 
         <ImageView
             android:id="@+id/poster"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:layout_margin="20dp"></ImageView>
 
         <ImageView
             android:id="@+id/AddToFavorite"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
             android:text="ذخیره" />
-        <!--            android:background="@drawable/uninstall"-->
 
 
     </LinearLayout>
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#9E7890E4"
         android:orientation="vertical">
 
 
@@ -42,7 +45,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -65,7 +67,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -88,7 +89,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -111,7 +111,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -134,7 +133,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -157,7 +155,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -180,7 +177,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -203,7 +199,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:background="#9E7890E4"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -222,7 +217,6 @@
                 android:text="رتبه ی IMDB "></TextView>
         </LinearLayout>
 
-
-
     </LinearLayout>
+    </ScrollView>
 </LinearLayout>

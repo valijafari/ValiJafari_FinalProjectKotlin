@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="right"
     android:layout_gravity="right"
-    android:background="#9E7890E4"
+    android:background="#7890E4"
     tools:context=".FavoriteList">
 
     <androidx.recyclerview.widget.RecyclerView
