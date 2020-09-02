@@ -30,11 +30,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:textSize="30sp"
                 android:textColor="#FFFFFF"
-                android:paddingRight="100dp"
+                android:=""
                 android:text="فیلم یاب" />
 <!--        </LinearLayout>-->
 
