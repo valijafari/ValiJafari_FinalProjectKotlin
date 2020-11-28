@@ -32,17 +32,7 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:text=" ولی جعفری اقدم"></TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="30dp"
-        android:paddingRight="5dp"
-        android:textColor="#651FFF"
-        android:textSize="30sp"
 
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:text="09376659928"></TextView>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,48 +1,19 @@
+package com.example.valijafari_finalproject
 
-package com.example.valijafari_finalproject;
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-import java.io.Serializable;
-import java.util.List;
-
-public class OmdbClass implements Serializable {
-
+class OmdbClass : Serializable {
     @SerializedName("Search")
     @Expose
-    private List<Search> search = null;
+    var search: List<Search>? = null
+
     @SerializedName("totalResults")
     @Expose
-    private String totalResults;
+    var totalResults: String? = null
+
     @SerializedName("Response")
     @Expose
-    private String response;
-
-    public List<Search> getSearch() {
-        return search;
-    }
-
-    public void setSearch(List<Search> search) {
-        this.search = search;
-    }
-
-    public String getTotalResults() {
-        return totalResults;
-    }
-
-    public void setTotalResults(String totalResults) {
-        this.totalResults = totalResults;
-    }
-
-    public String getResponse() {
-        return response;
-    }
-
-    public void setResponse(String response) {
-        this.response = response;
-    }
-
+    var response: String? = null
 }
-
-
